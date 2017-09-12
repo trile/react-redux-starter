@@ -8,7 +8,7 @@ import ReduxPromise from 'redux-promise';
 
 import reducers from './reducers';
 
-import HomeIndex from './components/home-index';
+import App from './components/app';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
@@ -16,7 +16,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <Switch>
-        <Route exact path='/' component={HomeIndex}/>
+        <Route exact path='/' component={App}/>
       </Switch>
     </BrowserRouter>
   </Provider>,
