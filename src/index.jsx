@@ -13,10 +13,12 @@ import HomeIndex from './components/home-index';
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route exact path='/' component={HomeIndex}/>
-    </Switch>
-  </BrowserRouter>,
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={HomeIndex}/>
+      </Switch>
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 )
