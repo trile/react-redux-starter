@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state //dummy state
+  greeting: (state = {}) => {return "Welcome to Redux!"}
 });
 
 export default rootReducer;
