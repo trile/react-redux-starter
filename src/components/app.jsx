@@ -8,7 +8,9 @@ class App extends Component {
 
   render() {
     return (
-      <h1>{this.props.greeting}</h1>
+      <div id="app">
+        <h1>{this.props.greeting}</h1>
+      </div>
     )
   }
 }
